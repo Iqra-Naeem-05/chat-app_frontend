@@ -8,6 +8,9 @@ function ChatPage() {
   const { socket, onlineUsers, selectedUser, setSelectedUser } = useSocket();
   const { user } = useAuth();
 
+  useEffect(() => {
+    setSelectedUser(null);
+  }, [user]);  
   
   if (!socket) {
     return (
@@ -16,9 +19,6 @@ function ChatPage() {
       </div>
     );
   }
-  useEffect(() => {
-    setSelectedUser(null);
-  }, [user]);  
 
   return (
     <>

@@ -30,7 +30,8 @@ export const SocketProvider = ({ children }) => {
     setSocket(newSocket);
 
     newSocket.on("connect", () =>
-      console.log("✅ Socket connected:", newSocket.id)
+      console.log("✅ Socket connected:")
+      // console.log("✅ Socket connected:", newSocket.id)
     );
 
     newSocket.on("already_online", (users) =>

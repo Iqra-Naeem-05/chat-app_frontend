@@ -206,7 +206,7 @@ function ChatWindow() {
   };
 
   return (
-    <div className=" h-full flex flex-col">
+    <div className=" h-screen flex flex-col">
 
       <div className="sticky top-0 z-10 bg-white">
         <h1 className="p-4 text-xl font-semibold border-b border-b-black text-orange-500 ">
@@ -269,7 +269,7 @@ function ChatWindow() {
         <div ref={scrollRef} />
       </div>
 
-      <form onSubmit={handleSubmit} className="flex gap-2 p-4 bg-white border-t">
+      <form onSubmit={handleSubmit} className="flex gap-2 p-4 bg-white border-t sticky bottom-0">
         <input
           value={text}
           onChange={(e) => setText(e.target.value)}
