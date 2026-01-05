@@ -34,6 +34,7 @@ function Signup() {
     };
 
     const validate = () => {
+        
         let tempErrors = {};
         let isValid = true;
 
